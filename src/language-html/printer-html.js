@@ -720,7 +720,7 @@ function printAttributes(path, options, print) {
     parts.push(
       node.isSelfClosing && !isHtmlVoidTagNeeded(node, options)
         ? line
-        : softline
+        : options.jsxBracketSameLine ? "" : softline
     );
   }
 
